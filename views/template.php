@@ -54,6 +54,6 @@
 </div>
 <!-- ./wrapper -->
 
-<script src="vistas/js/template.js"></script>
+<script src="views/js/template.js"></script>
 </body>
 </html>
