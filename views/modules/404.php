@@ -1,7 +1,4 @@
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-
-
   <!-- Main content -->
   <section class="content">
     <div class="error-page">
@@ -12,7 +9,7 @@
           Ooops! Página no encontrada.
           <p>
             Ingrese al menú lateral y allí podrás encontrar las páginas disponiles.
-            También puedes regresar haciendo <a href="inicio" title="Click aquí">Click aquí</a>
+            También puedes regresar haciendo <a href="home" title="Click aquí">Click aquí</a>
           </p>
         </h3>
       </div>
