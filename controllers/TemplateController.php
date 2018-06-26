@@ -2,7 +2,8 @@
 /**
  *
  */
-class TemplateController {
+class TemplateController
+{
 
 	public function ctrTemplate()
 	{

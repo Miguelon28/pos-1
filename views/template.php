@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Inventory System</title>
 
+  <link rel="icon" type="text/css" href="views/img/template/icono-negro.png">
+
   <!-- PLUGINS DE CSS -->
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -41,15 +43,33 @@
 <div class="wrapper">
 
   <!-- Header. contains the nav menu. -->
-  <?php include "modules/header.php" ?>
+  <?php include 'modules/header.php' ?>
 
   <!-- Left side column. contains the sidebar -->
-  <?php include "modules/menu.php" ?>
+  <?php include 'modules/menu.php' ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <?php include "modules/content.php" ?>
+  <?php
+    if (isset($_GET['ruta'])) {
+      if ($_GET['ruta'] == 'home' ||
+          $_GET['ruta'] == 'users' ||
+          $_GET['ruta'] == 'categories' ||
+          $_GET['ruta'] == 'products' ||
+          $_GET['ruta'] == 'customers' ||
+          $_GET['ruta'] == 'sales' ||
+          $_GET['ruta'] == 'sales-create' ||
+          $_GET['ruta'] == 'sales-report') {
 
-  <?php include "modules/footer.php" ?>
+        include 'modules/'.$_GET['ruta'].'.php';
+
+      } else {
+        include 'modules/404.php';
+      }
+    } else {
+      include 'modules/home.php';
+    }
+  ?>
+  <?php include 'modules/footer.php' ?>
 
 </div>
 <!-- ./wrapper -->
