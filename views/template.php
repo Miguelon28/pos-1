@@ -38,42 +38,49 @@
   <script src="views/dist/js/adminlte.min.js"></script>
 
 </head>
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+  <?php if (isset($_SESSION['iniciarSesion']) && $_SESSION['iniciarSesion'] == 'ok') { ?>
+    <!-- Site wrapper -->
+    <div class="wrapper">
 
-  <!-- Header. contains the nav menu. -->
-  <?php include 'modules/header.php' ?>
+      <!-- Header. contains the nav menu. -->
+      <?php include 'modules/header.php' ?>
 
-  <!-- Left side column. contains the sidebar -->
-  <?php include 'modules/menu.php' ?>
+      <!-- Left side column. contains the sidebar -->
+      <?php include 'modules/menu.php' ?>
 
-  <!-- Content Wrapper. Contains page content -->
-  <?php
-    if (isset($_GET['ruta'])) {
-      if ($_GET['ruta'] == 'home' ||
-          $_GET['ruta'] == 'users' ||
-          $_GET['ruta'] == 'categories' ||
-          $_GET['ruta'] == 'products' ||
-          $_GET['ruta'] == 'customers' ||
-          $_GET['ruta'] == 'sales' ||
-          $_GET['ruta'] == 'sales-create' ||
-          $_GET['ruta'] == 'sales-report') {
+      <!-- Content Wrapper. Contains page content -->
+      <?php
+        if (isset($_GET['ruta'])) {
+          if ($_GET['ruta'] == 'home' ||
+              $_GET['ruta'] == 'users' ||
+              $_GET['ruta'] == 'categories' ||
+              $_GET['ruta'] == 'products' ||
+              $_GET['ruta'] == 'customers' ||
+              $_GET['ruta'] == 'sales' ||
+              $_GET['ruta'] == 'sales-create' ||
+              $_GET['ruta'] == 'sales-report') {
 
-        include 'modules/'.$_GET['ruta'].'.php';
+            include 'modules/'.$_GET['ruta'].'.php';
 
-      } else {
-        include 'modules/404.php';
-      }
-    } else {
-      include 'modules/home.php';
-    }
-  ?>
-  <?php include 'modules/footer.php' ?>
+          } else {
+            include 'modules/404.php';
+          }
+        } else {
+          include 'modules/home.php';
+        }
+      ?>
 
-</div>
-<!-- ./wrapper -->
+      <?php include 'modules/footer.php' ?>
 
+    </div>
+    <!-- ./wrapper -->
+  <?php } else { ?>
+
+    <!-- Login. contains the login page. -->
+    <?php include 'modules/login.php' ?>
+
+  <?php } ?>
 <script src="views/js/template.js"></script>
 </body>
 </html>
