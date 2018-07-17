@@ -24,7 +24,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped dtable">
           <thead>
           <tr>
             <th style="width:10px">#</th>
@@ -54,7 +54,7 @@
             </td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>2</td>
             <td>Usuario Administrado</td>
             <td>admin</td>
             <td><img src="views/img/users/default/anonymous.png" alt=""></td>
@@ -69,12 +69,12 @@
             </td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>3</td>
             <td>Usuario Administrado</td>
             <td>admin</td>
             <td><img src="views/img/users/default/anonymous.png" alt=""></td>
             <td>Administrador</td>
-            <td><button class="btn btn-success btn-xs">Activado</button></td>
+            <td><button class="btn btn-danger btn-xs">Desactivado</button></td>
             <td>2017-12-11 12:05:32</td>
             <td>
               <div class="btn-group">
