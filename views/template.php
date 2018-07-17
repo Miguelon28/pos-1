@@ -44,8 +44,8 @@ session_start();
   <!-- AdminLTE App -->
   <script src="views/dist/js/adminlte.min.js"></script>
   <!-- DataTables -->
-<script src="views/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="views/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 </head>
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
