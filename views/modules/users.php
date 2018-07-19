@@ -24,7 +24,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped dtable">
+        <table class="table table-bordered table-striped dt-responsive dtable">
           <thead>
             <tr>
               <th style="width:10px">#</th>
