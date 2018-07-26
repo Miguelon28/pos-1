@@ -24,7 +24,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped dt-responsive dtable">
+        <table class="table table-bordered table-striped dt-responsive dtable" width="100%">
           <thead>
             <tr>
               <th style="width:10px">#</th>
@@ -158,6 +158,13 @@
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
           <button type="submit" class="btn btn-primary">Guardar usuario</button>
         </div>
+
+        <?php
+
+          $createUser = new UsersController();
+          $createUser->ctrCreateUser();
+
+        ?>
       </form>
     </div>
 
